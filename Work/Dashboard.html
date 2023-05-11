@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="shortcut icon" href="#"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap'); </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+            <!-- <img src="../IMGS/LOGO/GMS2.jpeg" alt=""class="d-inline-block align-text-top"> -->
+            <h1>Global Mind Solutions</h1>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./Servicios.html">Servicios</a>
+                </li>
+            </ul>
+                </div>
+            </div>
+        </nav>
+    
+    <h2>formulario de Reporte incidencias ATM GMS </h2>
+
+    <form class="Formulario" action="">
+        <input type="text"placeholder="Ingrese incidencia" id="Text">
+        <input type="number" name="" id="" placeholder="Ingrese # de ATM">
+        <label for="">Inmediata</label>
+        <input type="checkbox" name="Inmediata" id="">
+        <label for="">Para Mejorar</label>
+        <input type="checkbox" name="para-mejorar" id="">
+        <input type="file" name="" id="" required>
+        <input type="email" name="email" id="email" placeholder="Ingrese su correo">
+        <input type="submit" value="Enviar">
+    </form>
+
+
+    <div class="" id="embedContainer"> <script>embedPowerBIReport()</script>
+
+    </div>
+
+    <!-- <iframe title="Report Section" width="900" height="900" border="10px" src="https://app.powerbi.com/view?r=eyJrIjoiOTRlNDA5YTEtYWY5OC00NDhlLThlNjMtNzQ1NDAyZTE5OWVkIiwidCI6IjdhNTUwYjgxLTE3NjQtNGMzNC05NGUyLWQ5MmZjNmJmMDZmMSIsImMiOjJ9" frameborder="0" allowFullScreen="true"></iframe> -->
+    
+</body>
+<script src="app.js"></script>
+</html>
