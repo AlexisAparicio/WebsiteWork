@@ -5,8 +5,16 @@ import { PlusCircleIcon} from '@heroicons/react/24/outline'
 const Card=(data)=>{
     const context = useContext(ShoppingCartContext)
 
+    const showProductDetail = (ProductDetail) => {
+        context.openProductDetail()
+        context.setProductsToShow(ProductDetail)
+        
+    }
+
     return(
-       <div className="backdrop-blur-[16px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-10border border-opacity-20 border-[#ffffff]">
+       <div 
+       className="backdrop-blur-[16px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-10border border-opacity-20 border-[#ffffff]"
+       onClick={()=>showProductDetail(data.data)}>
         {/* <div className="bg-white cursor-pointer w-56 h-60 rounded-lg"> */}
             <figure className="relative mb-2 w-full h-4/5">
                 <span className="absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xm m-2 px-3 py-0.5">{data.data.category.name}</span>
