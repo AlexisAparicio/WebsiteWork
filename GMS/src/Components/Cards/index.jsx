@@ -10,9 +10,12 @@ const Card=(data)=>{
         context.setProductsToShow(ProductDetail)
     }
 
-    const addProductstoCart =(ProductData)=>{
+    const addProductstoCart =(event,ProductData)=>{
+        event.stopPropagation()
         context.setCount(context.count+1)
         context.setCartProducts([...context.cartProducts,ProductData])
+        context.openCheckoutSideMenu()
+        context.closeProductDetail()
         console.log('Cart:',context.cartProducts)
     }
 
@@ -25,7 +28,7 @@ const Card=(data)=>{
                 <span className="absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xm m-2 px-3 py-0.5">{data.data.category.name}</span>
                 <img className='w-full h-full object-cover rounded-lg' src={data.data.images[0]} alt={data.data.title} />
                 <button 
-                onClick={()=>addProductstoCart(data.data)}
+                onClick={(event)=>addProductstoCart(event,data.data)}
                 className="absolute top-0 right-0 flex justify-center items-center bg-white w-6 h-6 rounded-full m-2 p-1"
                 >
                 <PlusCircleIcon className="size-6 text-black-500" />
